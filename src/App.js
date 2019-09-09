@@ -6,10 +6,9 @@ function App() {
   state = {
     persons: [
       { name: 'Octav', age: 23 },
-    {name: 'Save', age: 21 },
-    {name: 'Luca', age: 25 }
+      { name: 'Save', age: 21 },
+      { name: 'Luca', age: 24 }
     ]
- 
   }
 
   return (
