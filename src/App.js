@@ -28,22 +28,32 @@ switchNameHandler = (newName) => {
 nameChangedHandler = (event) => {
   this.setState( {
     persons: [
-    { name: event.target.value, age: 23 },
+    { name: 'Octaviannnnnn', age: 23 },
     { name: event.target.value, age: 21 },
-    { name: event.target.value, age: 25 }
+    { name: 'Luca', age: 25 }
   ] 
 } )
 }
 
 render() {
+  const style ={
+    backgroundColor:'white',
+    font: 'inherit',
+    border: '1px solid blue',
+    padding: '8px',
+    cursor: 'pointer'
+  }
   return (
     <div className="App">
-     <h1>He, I'm a React App</h1>
+     <h1>Hi, I'm a React App</h1>
      <p>This is really working!</p>
-     <button onClick={() => this.switchNameHandler('Octaviannnn!!!octavian!!!')}>Switch name</button>
+     
+     <button
+     style={style}
+     onClick={() => this.switchNameHandler('Octaviannnn!')}>Switch name</button>
      <Person 
      name={this.state.persons[0].name} age={this.state.persons[0].age} 
-     changed={this.nameChangedHandler}/>
+     />
      <Person 
      name={this.state.persons[1].name} age={this.state.persons[1].age}
      click={this.switchNameHandler.bind(this, 'octa!!!')}
@@ -52,7 +62,7 @@ render() {
      <Person 
      name={this.state.persons[2].name} 
      age={this.state.persons[2].age}
-     changed={this.nameChangedHandler}/>
+     />
     </div>
   );
   //return React.createElement('div', {className: 'App'}, React)
